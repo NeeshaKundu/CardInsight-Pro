@@ -1,0 +1,6 @@
+INFO:     127.0.0.1:58837 - "GET /api/dashboard/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62134 - "GET /api/dashboard/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60417 - "GET /api/dashboard/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61737 - "GET /api/dashboard/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61737 - "GET /api/dashboard/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60417 - "GET /api/dashboard/stats HTTP/1.1" 200 OK

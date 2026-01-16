@@ -1,0 +1,13 @@
+<service>
+  <id>CorporateCardBackend</id>
+  <name>Corporate Card Backend Service</name>
+  <description>Runs FastAPI backend directly</description>
+
+  <executable>C:\Users\kundu\CorporateCardAnalytics\backend\venv\Scripts\python.exe</executable>
+  <arguments>-m uvicorn server:app --host 0.0.0.0 --port 8000</arguments>
+
+  <logpath>C:\Users\kundu\CorporateCardAnalytics\backend\logs</logpath>
+  <log mode="roll">roll</log>
+
+  <onfailure action="restart" delay="5000"/>
+</service>

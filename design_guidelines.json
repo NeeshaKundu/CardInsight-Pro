@@ -1,0 +1,151 @@
+{
+  "identity": {
+    "name": "E1: The Anti-AI Designer",
+    "archetype": "The Swiss & High-Contrast (Corporate Edition)",
+    "principles": [
+      "Fusion over Imitation: Finance Precision x Swiss Grid",
+      "Emotion First: Trust, Authority, Insight",
+      "Content is King: Data tells the story",
+      "Density: High information density without clutter"
+    ]
+  },
+  "typography": {
+    "headings": {
+      "family": "Work Sans, sans-serif",
+      "weights": ["500", "600", "700"],
+      "usage": "All section headers, card titles, and KPI values. Use tight tracking (-0.02em) for large numbers."
+    },
+    "body": {
+      "family": "Inter, sans-serif",
+      "weights": ["400", "500"],
+      "usage": "General text, table data, labels. Optimized for legibility at small sizes."
+    },
+    "mono": {
+      "family": "JetBrains Mono, monospace",
+      "usage": "Transaction IDs, API keys, raw data values."
+    }
+  },
+  "colors": {
+    "palette": {
+      "primary": {
+        "name": "Corporate Navy",
+        "hex": "#0F172A",
+        "tailwind": "bg-slate-900",
+        "usage": "Sidebar, Primary Buttons, Active States"
+      },
+      "secondary": {
+        "name": "Slate Mist",
+        "hex": "#F1F5F9",
+        "tailwind": "bg-slate-100",
+        "usage": "Page Backgrounds, Secondary Actions"
+      },
+      "accent": {
+        "name": "Electric Blue",
+        "hex": "#2563EB",
+        "tailwind": "text-blue-600",
+        "usage": "Links, Active Tabs, Highlights"
+      },
+      "success": {
+        "name": "Growth Emerald",
+        "hex": "#10B981",
+        "tailwind": "text-emerald-500",
+        "usage": "Positive Trends, 'Good' Health Scores"
+      },
+      "danger": {
+        "name": "Risk Rose",
+        "hex": "#F43F5E",
+        "tailwind": "text-rose-500",
+        "usage": "Negative Trends, High Churn Risk"
+      },
+      "background": {
+        "light": "#F8FAFC",
+        "dark": "#020617"
+      },
+      "surface": {
+        "light": "#FFFFFF",
+        "dark": "#0F172A"
+      }
+    },
+    "gradients": {
+      "subtle_glow": "bg-gradient-to-br from-slate-50 to-slate-100",
+      "active_state": "bg-gradient-to-r from-blue-600 to-blue-700"
+    }
+  },
+  "layout": {
+    "grid_system": {
+      "dashboard": "grid grid-cols-1 md:grid-cols-12 gap-4 p-6",
+      "card_internal": "flex flex-col gap-2 p-5"
+    },
+    "spacing": {
+      "container_padding": "p-6 md:p-8",
+      "section_gap": "gap-6",
+      "component_gap": "gap-4"
+    },
+    "radius": {
+      "default": "rounded-lg",
+      "small": "rounded-md",
+      "large": "rounded-xl"
+    }
+  },
+  "components": {
+    "cards": {
+      "style": "bg-white border border-slate-200 shadow-sm hover:shadow-md transition-all duration-200",
+      "header": "border-b border-slate-100 pb-3 mb-3"
+    },
+    "buttons": {
+      "primary": "bg-slate-900 text-white hover:bg-slate-800 shadow-sm",
+      "secondary": "bg-white text-slate-700 border border-slate-200 hover:bg-slate-50",
+      "ghost": "hover:bg-slate-100 text-slate-600"
+    },
+    "charts": {
+      "library": "recharts",
+      "style": "minimalist, thin lines, gradient fills with low opacity (10%)",
+      "colors": ["#2563EB", "#10B981", "#F43F5E", "#F59E0B", "#8B5CF6"]
+    },
+    "tables": {
+      "style": "dense, border-b border-slate-100",
+      "header": "bg-slate-50 text-slate-500 text-xs uppercase tracking-wider font-medium",
+      "row": "hover:bg-slate-50/50 transition-colors"
+    }
+  },
+  "visual_assets": {
+    "images": {
+      "login_background": {
+        "url": "https://images.unsplash.com/photo-1765046255478-55efc763637c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODF8MHwxfHNlYXJjaHwzfHxtaW5pbWFsaXN0JTIwYWJzdHJhY3QlMjBnZW9tZXRyaWMlMjB0ZWNobm9sb2d5JTIwYmFja2dyb3VuZCUyMGxpZ2h0fGVufDB8fHx8MTc2ODU0NDg4OHww&ixlib=rb-4.1.0&q=85",
+        "alt": "Abstract white wavy lines technology background"
+      },
+      "user_avatar_1": {
+        "url": "https://images.unsplash.com/photo-1589668944320-409833e5ba10?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBjb3Jwb3JhdGUlMjBoZWFkc2hvdHMlMjBkaXZlcnNlfGVufDB8fHx8MTc2ODU0NDg4N3ww&ixlib=rb-4.1.0&q=85",
+        "alt": "Senior Financial Analyst"
+      },
+      "user_avatar_2": {
+        "url": "https://images.unsplash.com/photo-1659353221237-6a1cfb73fd90?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODd8MHwxfHNlYXJjaHwyfHxwcm9mZXNzaW9uYWwlMjBjb3Jwb3JhdGUlMjBoZWFkc2hvdHMlMjBkaXZlcnNlfGVufDB8fHx8MTc2ODU0NDg4N3ww&ixlib=rb-4.1.0&q=85",
+        "alt": "Portfolio Manager"
+      }
+    },
+    "icons": {
+      "library": "lucide-react",
+      "style": "stroke-width-1.5"
+    }
+  },
+  "motion": {
+    "transitions": "transition-all duration-200 ease-in-out",
+    "hover_lift": "hover:-translate-y-0.5",
+    "page_enter": "animate-in fade-in slide-in-from-bottom-4 duration-500"
+  },
+  "accessibility": {
+    "contrast": "Ensure text is Slate-600 or darker on white backgrounds.",
+    "focus": "ring-2 ring-slate-400 ring-offset-2",
+    "aria": "All interactive elements must have aria-labels if no text is present."
+  },
+  "universal_guidelines": [
+    "Do not use gradients for text.",
+    "Avoid 'Inter' for headings; use 'Work Sans'.",
+    "Use 'sonner' for toasts.",
+    "All interactive elements must have 'data-testid'.",
+    "Use 'lucide-react' for icons.",
+    "Prefer 'recharts' for data visualization.",
+    "Keep the design dense but breathable (high padding inside cards, tight gaps between cards)."
+  ],
+  "instructions_to_main_agent": "You are building a Corporate Card Analytics Dashboard. Focus on the 'Segmentation Analysis' and 'Beyond-the-card' recommendations. Use the provided image URLs for the login screen and user avatars. Implement the 'Bento' grid layout for the main dashboard. Ensure the 'Customer Detail View' is rich with data but organized cleanly using tabs and cards."
+}

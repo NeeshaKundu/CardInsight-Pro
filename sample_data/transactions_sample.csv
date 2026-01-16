@@ -1,0 +1,6 @@
+customer_id,amount,merchant_category,is_international,transaction_date,merchant_name
+cust-001,1500.50,Travel & Transportation,true,2025-01-15,United Airlines
+cust-001,250.00,Restaurants,false,2025-01-14,Starbucks
+cust-001,3200.00,Hotels & Lodging,true,2025-01-13,Marriott International
+cust-002,450.75,Office Supplies,false,2025-01-12,Staples
+cust-002,2100.00,Technology & Software,false,2025-01-11,Microsoft Store

@@ -1,0 +1,163 @@
+2026-01-16 19:22:42,716 DEBUG - Starting WinSW in console mode
+2026-01-16 19:22:47,989 DEBUG - Starting WinSW in console mode
+2026-01-16 19:22:48,063 INFO  - Installing service 'Corporate Card Backend Service (CorporateCardBackend)'...
+2026-01-16 19:22:48,164 INFO  - Service 'Corporate Card Backend Service (CorporateCardBackend)' was installed successfully.
+2026-01-16 19:22:59,695 DEBUG - Starting WinSW in console mode
+2026-01-16 19:23:03,213 DEBUG - Starting WinSW in console mode
+2026-01-16 19:23:03,272 INFO  - Starting service 'Corporate Card Backend Service (CorporateCardBackend)'...
+2026-01-16 19:23:03,814 DEBUG - Starting WinSW in service mode
+2026-01-16 19:23:03,883 INFO  - Service 'Corporate Card Backend Service (CorporateCardBackend)' started successfully.
+2026-01-16 19:23:04,087 INFO  - Starting cmd.exe /c start_backend.bat
+2026-01-16 19:23:04,154 INFO  - Started process 25864
+2026-01-16 19:23:04,180 DEBUG - Forwarding logs of the process System.Diagnostics.Process (cmd) to WinSW.RollingLogAppender
+2026-01-16 19:23:10,761 DEBUG - Starting WinSW in console mode
+2026-01-16 19:24:37,301 DEBUG - Starting WinSW in console mode
+2026-01-16 19:24:40,494 DEBUG - Starting WinSW in console mode
+2026-01-16 19:24:40,558 INFO  - Stopping service 'Corporate Card Backend Service (CorporateCardBackend)'...
+2026-01-16 19:24:40,578 INFO  - Service 'Corporate Card Backend Service (CorporateCardBackend)' has already stopped.
+2026-01-16 19:24:46,397 DEBUG - Starting WinSW in console mode
+2026-01-16 19:24:49,355 DEBUG - Starting WinSW in console mode
+2026-01-16 19:24:49,412 INFO  - Starting service 'Corporate Card Backend Service (CorporateCardBackend)'...
+2026-01-16 19:24:49,993 DEBUG - Starting WinSW in service mode
+2026-01-16 19:24:50,063 INFO  - Service 'Corporate Card Backend Service (CorporateCardBackend)' started successfully.
+2026-01-16 19:24:50,314 INFO  - Starting cmd.exe /c start_backend.bat
+2026-01-16 19:24:50,376 INFO  - Started process 13812
+2026-01-16 19:24:50,417 DEBUG - Forwarding logs of the process System.Diagnostics.Process (cmd) to WinSW.RollingLogAppender
+2026-01-16 19:24:54,088 DEBUG - Starting WinSW in console mode
+2026-01-16 19:31:45,611 DEBUG - Starting WinSW in console mode
+2026-01-16 19:31:49,247 DEBUG - Starting WinSW in console mode
+2026-01-16 19:31:49,314 INFO  - Stopping service 'Corporate Card Backend Service (CorporateCardBackend)'...
+2026-01-16 19:31:49,329 INFO  - Service 'Corporate Card Backend Service (CorporateCardBackend)' stopped successfully.
+2026-01-16 19:31:49,332 INFO  - Stopping CorporateCardBackend
+2026-01-16 19:31:49,333 DEBUG - ProcessKill 13812
+2026-01-16 19:31:49,340 DEBUG - Stopping process 13812...
+2026-01-16 19:31:49,934 DEBUG - Starting WinSW in console mode
+2026-01-16 19:31:53,089 DEBUG - Starting WinSW in console mode
+2026-01-16 19:31:53,146 INFO  - Starting service 'Corporate Card Backend Service (CorporateCardBackend)'...
+2026-01-16 19:31:53,165 INFO  - Service 'Corporate Card Backend Service (CorporateCardBackend)' has already started.
+2026-01-16 19:32:04,363 DEBUG - Process 13812 terminated.
+2026-01-16 19:32:04,374 INFO  - Finished CorporateCardBackend
+2026-01-16 19:32:19,539 DEBUG - Starting WinSW in console mode
+2026-01-16 19:32:28,000 DEBUG - Starting WinSW in console mode
+2026-01-16 19:32:31,263 DEBUG - Starting WinSW in console mode
+2026-01-16 19:32:31,314 INFO  - Uninstalling service 'Corporate Card Backend Service (CorporateCardBackend)'...
+2026-01-16 19:32:31,327 INFO  - Service 'Corporate Card Backend Service (CorporateCardBackend)' was uninstalled successfully.
+2026-01-16 19:32:39,176 DEBUG - Starting WinSW in console mode
+2026-01-16 19:32:42,654 DEBUG - Starting WinSW in console mode
+2026-01-16 19:32:42,705 INFO  - Installing service 'Corporate Card Backend Service (CorporateCardBackend)'...
+2026-01-16 19:32:42,751 INFO  - Service 'Corporate Card Backend Service (CorporateCardBackend)' was installed successfully.
+2026-01-16 19:32:49,003 DEBUG - Starting WinSW in console mode
+2026-01-16 19:32:51,832 DEBUG - Starting WinSW in console mode
+2026-01-16 19:32:51,896 INFO  - Starting service 'Corporate Card Backend Service (CorporateCardBackend)'...
+2026-01-16 19:32:52,428 DEBUG - Starting WinSW in service mode
+2026-01-16 19:32:52,481 INFO  - Service 'Corporate Card Backend Service (CorporateCardBackend)' started successfully.
+2026-01-16 19:32:52,676 INFO  - Starting cmd.exe /c start_backend.bat
+2026-01-16 19:32:52,747 INFO  - Started process 24092
+2026-01-16 19:32:52,770 DEBUG - Forwarding logs of the process System.Diagnostics.Process (cmd) to WinSW.RollingLogAppender
+2026-01-16 19:32:55,846 DEBUG - Starting WinSW in console mode
+2026-01-16 20:00:52,565 DEBUG - Starting WinSW in console mode
+2026-01-16 20:00:59,807 DEBUG - Starting WinSW in console mode
+2026-01-16 20:01:03,380 DEBUG - Starting WinSW in console mode
+2026-01-16 20:01:03,450 INFO  - Stopping service 'Corporate Card Backend Service (CorporateCardBackend)'...
+2026-01-16 20:01:03,474 INFO  - Service 'Corporate Card Backend Service (CorporateCardBackend)' stopped successfully.
+2026-01-16 20:01:03,499 INFO  - Stopping CorporateCardBackend
+2026-01-16 20:01:03,504 DEBUG - ProcessKill 24092
+2026-01-16 20:01:03,521 DEBUG - Stopping process 24092...
+2026-01-16 20:01:09,752 DEBUG - Starting WinSW in console mode
+2026-01-16 20:01:13,432 DEBUG - Starting WinSW in console mode
+2026-01-16 20:01:13,500 INFO  - Starting service 'Corporate Card Backend Service (CorporateCardBackend)'...
+2026-01-16 20:01:13,519 INFO  - Service 'Corporate Card Backend Service (CorporateCardBackend)' has already started.
+2026-01-16 20:01:17,082 DEBUG - Starting WinSW in console mode
+2026-01-16 20:01:18,537 DEBUG - Process 24092 terminated.
+2026-01-16 20:01:18,554 ERROR - Failed to stop service.
+System.ComponentModel.Win32Exception (6): The handle is invalid.
+   at System.Diagnostics.Process.GetProcessTimes()
+   at System.Diagnostics.Process.get_StartTimeCore()
+   at System.Diagnostics.Process.get_StartTime()
+   at WinSW.Util.ProcessHelper.GetChildren(Process process)
+   at WinSW.Util.ProcessHelper.StopProcessTree(Process process, TimeSpan stopTimeout, Boolean stopParentProcessFirst)
+   at WinSW.WrapperService.DoStop()
+   at WinSW.WrapperService.OnStop()
+2026-01-16 20:01:31,157 DEBUG - Starting WinSW in service mode
+2026-01-16 20:01:31,393 INFO  - Starting cmd.exe /c start_backend.bat
+2026-01-16 20:01:31,456 INFO  - Started process 23812
+2026-01-16 20:01:31,487 DEBUG - Forwarding logs of the process System.Diagnostics.Process (cmd) to WinSW.RollingLogAppender
+2026-01-16 20:10:53,090 DEBUG - Starting WinSW in service mode
+2026-01-16 20:10:53,410 INFO  - Starting cmd.exe /c start_backend.bat
+2026-01-16 20:10:53,486 INFO  - Started process 22576
+2026-01-16 20:10:53,516 DEBUG - Forwarding logs of the process System.Diagnostics.Process (cmd) to WinSW.RollingLogAppender
+2026-01-16 20:11:44,090 DEBUG - Starting WinSW in console mode
+2026-01-16 20:11:47,272 DEBUG - Starting WinSW in console mode
+2026-01-16 20:11:47,329 INFO  - Stopping service 'Corporate Card Backend Service (CorporateCardBackend)'...
+2026-01-16 20:11:47,344 INFO  - Service 'Corporate Card Backend Service (CorporateCardBackend)' stopped successfully.
+2026-01-16 20:11:47,348 INFO  - Stopping CorporateCardBackend
+2026-01-16 20:11:47,349 DEBUG - ProcessKill 22576
+2026-01-16 20:11:47,360 DEBUG - Stopping process 22576...
+2026-01-16 20:11:54,461 DEBUG - Starting WinSW in console mode
+2026-01-16 20:11:57,644 DEBUG - Starting WinSW in console mode
+2026-01-16 20:11:57,694 INFO  - Uninstalling service 'Corporate Card Backend Service (CorporateCardBackend)'...
+2026-01-16 20:11:57,704 WARN  - Service 'Corporate Card Backend Service (CorporateCardBackend)' is started. It may be impossible to uninstall it.
+2026-01-16 20:11:57,710 INFO  - Service 'Corporate Card Backend Service (CorporateCardBackend)' was uninstalled successfully.
+2026-01-16 20:12:02,375 DEBUG - Process 22576 terminated.
+2026-01-16 20:12:02,388 INFO  - Finished CorporateCardBackend
+2026-01-16 20:12:08,034 DEBUG - Starting WinSW in console mode
+2026-01-16 20:12:11,442 DEBUG - Starting WinSW in console mode
+2026-01-16 20:12:11,490 INFO  - Installing service 'Corporate Card Backend Service (CorporateCardBackend)'...
+2026-01-16 20:12:11,550 INFO  - Service 'Corporate Card Backend Service (CorporateCardBackend)' was installed successfully.
+2026-01-16 20:12:18,382 DEBUG - Starting WinSW in console mode
+2026-01-16 20:12:21,822 DEBUG - Starting WinSW in console mode
+2026-01-16 20:12:21,877 INFO  - Starting service 'Corporate Card Backend Service (CorporateCardBackend)'...
+2026-01-16 20:12:22,418 DEBUG - Starting WinSW in service mode
+2026-01-16 20:12:22,469 INFO  - Service 'Corporate Card Backend Service (CorporateCardBackend)' started successfully.
+2026-01-16 20:12:22,663 INFO  - Starting cmd.exe /c start_backend.bat
+2026-01-16 20:12:22,728 INFO  - Started process 13960
+2026-01-16 20:12:22,754 DEBUG - Forwarding logs of the process System.Diagnostics.Process (cmd) to WinSW.RollingLogAppender
+2026-01-16 20:12:26,976 DEBUG - Starting WinSW in console mode
+2026-01-16 20:15:46,411 DEBUG - Starting WinSW in console mode
+2026-01-16 20:24:13,268 DEBUG - Starting WinSW in console mode
+2026-01-16 20:24:17,148 DEBUG - Starting WinSW in console mode
+2026-01-16 20:24:17,208 INFO  - Stopping service 'Corporate Card Backend Service (CorporateCardBackend)'...
+2026-01-16 20:24:17,223 INFO  - Service 'Corporate Card Backend Service (CorporateCardBackend)' stopped successfully.
+2026-01-16 20:24:17,225 INFO  - Stopping CorporateCardBackend
+2026-01-16 20:24:17,227 DEBUG - ProcessKill 13960
+2026-01-16 20:24:17,235 DEBUG - Stopping process 13960...
+2026-01-16 20:24:20,318 DEBUG - Starting WinSW in console mode
+2026-01-16 20:24:23,271 DEBUG - Starting WinSW in console mode
+2026-01-16 20:24:23,330 INFO  - Starting service 'Corporate Card Backend Service (CorporateCardBackend)'...
+2026-01-16 20:24:23,345 INFO  - Service 'Corporate Card Backend Service (CorporateCardBackend)' has already started.
+2026-01-16 20:24:29,844 DEBUG - Starting WinSW in console mode
+2026-01-16 20:24:32,248 DEBUG - Process 13960 terminated.
+2026-01-16 20:24:32,266 INFO  - Finished CorporateCardBackend
+2026-01-16 20:26:01,938 DEBUG - Starting WinSW in console mode
+2026-01-16 20:26:05,529 DEBUG - Starting WinSW in console mode
+2026-01-16 20:26:05,599 INFO  - Stopping service 'Corporate Card Backend Service (CorporateCardBackend)'...
+2026-01-16 20:26:05,619 INFO  - Service 'Corporate Card Backend Service (CorporateCardBackend)' has already stopped.
+2026-01-16 20:26:11,673 DEBUG - Starting WinSW in console mode
+2026-01-16 20:26:15,364 DEBUG - Starting WinSW in console mode
+2026-01-16 20:26:15,416 INFO  - Uninstalling service 'Corporate Card Backend Service (CorporateCardBackend)'...
+2026-01-16 20:26:15,427 INFO  - Service 'Corporate Card Backend Service (CorporateCardBackend)' was uninstalled successfully.
+2026-01-16 20:26:20,683 DEBUG - Starting WinSW in console mode
+2026-01-16 20:26:25,687 DEBUG - Starting WinSW in console mode
+2026-01-16 20:26:25,739 INFO  - Installing service 'Corporate Card Backend Service (CorporateCardBackend)'...
+2026-01-16 20:26:25,785 INFO  - Service 'Corporate Card Backend Service (CorporateCardBackend)' was installed successfully.
+2026-01-16 20:26:30,414 DEBUG - Starting WinSW in console mode
+2026-01-16 20:26:34,413 DEBUG - Starting WinSW in console mode
+2026-01-16 20:26:34,468 INFO  - Starting service 'Corporate Card Backend Service (CorporateCardBackend)'...
+2026-01-16 20:26:35,015 DEBUG - Starting WinSW in service mode
+2026-01-16 20:26:35,062 INFO  - Service 'Corporate Card Backend Service (CorporateCardBackend)' started successfully.
+2026-01-16 20:26:35,258 INFO  - Starting C:\Users\kundu\CorporateCardAnalytics\backend\venv\Scripts\python.exe -m uvicorn server:app --host 0.0.0.0 --port 8000
+2026-01-16 20:26:35,318 INFO  - Started process 26756
+2026-01-16 20:26:35,344 DEBUG - Forwarding logs of the process System.Diagnostics.Process (python) to WinSW.RollingLogAppender
+2026-01-16 20:26:41,579 DEBUG - Starting WinSW in console mode
+2026-01-16 20:30:03,477 DEBUG - Starting WinSW in console mode
+2026-01-16 20:30:06,799 DEBUG - Starting WinSW in console mode
+2026-01-16 20:30:06,862 INFO  - Stopping service 'Corporate Card Backend Service (CorporateCardBackend)'...
+2026-01-16 20:30:06,877 INFO  - Service 'Corporate Card Backend Service (CorporateCardBackend)' stopped successfully.
+2026-01-16 20:30:06,880 INFO  - Stopping CorporateCardBackend
+2026-01-16 20:30:06,881 DEBUG - ProcessKill 26756
+2026-01-16 20:30:07,527 DEBUG - Process 26756 canceled with code 0.
+2026-01-16 20:30:07,537 INFO  - Finished CorporateCardBackend
+2026-01-16 20:30:25,493 DEBUG - Starting WinSW in console mode
+2026-01-16 20:30:30,143 DEBUG - Starting WinSW in console mode
+2026-01-16 20:30:30,190 INFO  - Uninstalling service 'Corporate Card Backend Service (CorporateCardBackend)'...
+2026-01-16 20:30:30,202 INFO  - Service 'Corporate Card Backend Service (CorporateCardBackend)' was uninstalled successfully.
