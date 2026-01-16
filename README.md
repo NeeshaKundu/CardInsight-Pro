@@ -16,11 +16,12 @@ Interactive charts with Recharts
 2. Customer Segmentation
 K-Means clustering identifies 4 segments:
 
-Segment	Customers	Avg Spend	Key Insight
-Low-Engagement / At-Risk	39	$43.1K	High churn risk, needs intervention
-Stable Mature Accounts	47	$32.8K	Reliable revenue, cross-sell opportunities
-High-Growth Corporates	32	$110K	Growth engine, strategic partnerships
-Travel-Heavy Corporates	32	$39.5K	FX revenue, travel solutions needed
+Segment                    	Customers	                Avg Spend	                Key Insight
+Low-Engagement / At-Risk	     39             $43.1K	                   High churn risk, needs intervention
+Stable Mature Accounts	       47           	$32.8K	                  Reliable revenue, cross-sell opportunities
+High-Growth Corporates	       32	            $110K	                    Growth engine, strategic partnerships
+Travel-Heavy Corporates	       32	            $39.5K                      FX revenue, travel solutions needed
+
 3. Customer Management
 Search & filter 150+ customers by segment, spend, company
 
