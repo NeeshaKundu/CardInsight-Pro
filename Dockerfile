@@ -16,7 +16,10 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY --from=frontend /app/frontend/build ./static
 COPY backend/ ./backend/
-COPY sample_data/ ./sample_data/ 2>/dev/null || :
+
+# Handle sample_data optionally
+RUN mkdir -p ./sample_data
+COPY sample_data/ ./sample_data/ 2>/dev/null || true
 
 EXPOSE 8000
 CMD ["uvicorn", "backend.server:app", "--host", "0.0.0.0", "--port", "8000"]
