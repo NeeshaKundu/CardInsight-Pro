@@ -5,7 +5,7 @@ import { Search, ArrowUpDown } from "lucide-react";
 import { toast } from "sonner";
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
+const API = `BACKEND_URL`;
 
 const Customers = () => {
   const [customers, setCustomers] = useState([]);
