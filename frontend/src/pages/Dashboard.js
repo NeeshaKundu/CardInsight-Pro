@@ -1,10 +1,12 @@
+
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { TrendingUp, Users, DollarSign, Activity } from "lucide-react";
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip, BarChart, Bar, XAxis, YAxis, CartesianGrid } from "recharts";
 import { toast } from "sonner";
 
-const API = '/api';
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+const API = `${BACKEND_URL}/api`;
 
 const Dashboard = () => {
   const [stats, setStats] = useState(null);

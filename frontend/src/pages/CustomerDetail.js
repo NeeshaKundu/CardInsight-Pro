@@ -5,7 +5,8 @@ import { ArrowLeft, TrendingUp, Globe, DollarSign, CreditCard, ShoppingBag } fro
 import { toast } from "sonner";
 import { format } from "date-fns";
 
-const API = '/api';
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+const API = `${BACKEND_URL}/api`;
 
 const CustomerDetail = () => {
   const { customerId } = useParams();
@@ -15,10 +16,9 @@ const CustomerDetail = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-  fetchCustomerData();
-  fetchRecommendations();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-}, [customerId]);
+    fetchCustomerData();
+    fetchRecommendations();
+  }, [customerId]);
 
   const fetchCustomerData = async () => {
     try {

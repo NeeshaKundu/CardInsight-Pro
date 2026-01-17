@@ -4,7 +4,8 @@ import axios from "axios";
 import { Users, TrendingUp, Globe, Clock } from "lucide-react";
 import { toast } from "sonner";
 
-const API = '/api';
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+const API = `${BACKEND_URL}/api`;
 
 const Segmentation = () => {
   const [segments, setSegments] = useState([]);

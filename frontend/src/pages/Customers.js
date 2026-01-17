@@ -4,7 +4,8 @@ import { useNavigate } from "react-router-dom";
 import { Search, ArrowUpDown } from "lucide-react";
 import { toast } from "sonner";
 
-const API = '/api';
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+const API = `${BACKEND_URL}/api`;
 
 const Customers = () => {
   const [customers, setCustomers] = useState([]);
@@ -19,9 +20,8 @@ const Customers = () => {
   }, []);
 
   useEffect(() => {
-  filterCustomers();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-}, [customers, searchTerm, selectedSegment]);
+    filterCustomers();
+  }, [customers, searchTerm, selectedSegment]);
 
   const fetchCustomers = async () => {
     try {
