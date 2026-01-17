@@ -10,3 +10,37 @@ INFO:     127.0.0.1:64443 - "GET /api/dashboard/stats HTTP/1.1" 200 OK
 INFO:     127.0.0.1:50075 - "GET /api/dashboard/stats HTTP/1.1" 200 OK
 INFO:     127.0.0.1:52816 - "GET /api/dashboard/stats HTTP/1.1" 200 OK
 INFO:     127.0.0.1:53282 - "GET /api/dashboard/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56555 - "GET /api/dashboard/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57001 - "GET /api/dashboard/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64581 - "GET /api/dashboard/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55860 - "GET /api/dashboard/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64834 - "POST /api/data/upload-customers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64834 - "GET /api/data/download-template/transactions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62869 - "POST /api/data/upload-transactions HTTP/1.1" 400 Bad Request
+INFO:     127.0.0.1:62869 - "POST /api/data/seed HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62869 - "POST /api/analyze HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62869 - "GET /api/segments HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62869 - "GET /api/segments HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62869 - "GET /api/dashboard/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59598 - "GET /api/dashboard/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61288 - "POST /api/data/upload-customers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60654 - "POST /api/data/upload-transactions HTTP/1.1" 400 Bad Request
+INFO:     127.0.0.1:54017 - "POST /api/data/upload-transactions HTTP/1.1" 400 Bad Request
+INFO:     127.0.0.1:62390 - "POST /api/data/upload-transactions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62390 - "POST /api/analyze HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62390 - "GET /api/dashboard/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62390 - "GET /api/dashboard/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58336 - "POST /api/data/seed HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58336 - "POST /api/analyze HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58336 - "GET /api/dashboard/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57965 - "GET /api/dashboard/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57748 - "GET /api/customers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57748 - "GET /api/customers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57748 - "GET /api/segments HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57748 - "GET /api/segments HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55407 - "GET /api/dashboard/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62432 - "GET /api/dashboard/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52753 - "GET /api/segments HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52753 - "GET /api/segments HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62538 - "GET /api/customers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62538 - "GET /api/customers HTTP/1.1" 200 OK

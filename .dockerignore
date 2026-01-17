@@ -1,0 +1,14 @@
+.git
+.vscode
+__pycache__
+node_modules
+venv
+*.pyc
+*.log
+.env
+.DS_Store
+test_reports/
+*.bat
+*.exe
+*.log
+logs/
