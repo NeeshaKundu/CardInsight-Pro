@@ -4,8 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { Search, ArrowUpDown } from "lucide-react";
 import { toast } from "sonner";
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `BACKEND_URL`;
+const API = '/api';
 
 const Customers = () => {
   const [customers, setCustomers] = useState([]);

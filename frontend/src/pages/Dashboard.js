@@ -4,8 +4,7 @@ import { TrendingUp, Users, DollarSign, Activity } from "lucide-react";
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip, BarChart, Bar, XAxis, YAxis, CartesianGrid } from "recharts";
 import { toast } from "sonner";
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `BACKEND_URL`;
+const API = '/api';
 
 const Dashboard = () => {
   const [stats, setStats] = useState(null);
