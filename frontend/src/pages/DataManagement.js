@@ -4,7 +4,7 @@ import { Database, Play, CheckCircle, Loader, Upload, Download, FileText } from 
 import { toast } from "sonner";
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
+const API = `BACKEND_URL`;
 
 const DataManagement = () => {
   const [seedingData, setSeedingData] = useState(false);
