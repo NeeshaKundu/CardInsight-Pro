@@ -16,9 +16,10 @@ const CustomerDetail = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetchCustomerData();
-    fetchRecommendations();
-  }, [customerId]);
+  fetchCustomerData();
+  fetchRecommendations();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+}, [customerId]);
 
   const fetchCustomerData = async () => {
     try {

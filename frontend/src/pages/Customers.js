@@ -20,8 +20,9 @@ const Customers = () => {
   }, []);
 
   useEffect(() => {
-    filterCustomers();
-  }, [customers, searchTerm, selectedSegment]);
+  filterCustomers();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+}, [customers, searchTerm, selectedSegment]);
 
   const fetchCustomers = async () => {
     try {
