@@ -646,9 +646,35 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
+# ... your existing code ...
+
 @app.on_event("shutdown")
 async def shutdown_db_client():
     client.close()
+
+# ================ ADD THIS AT THE VERY END ================
+
+import os
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
+
+# Serve React static files in production
+static_dir = os.path.join(os.path.dirname(__file__), "../static")
+if os.path.exists(static_dir):
+    # Mount static files at root
+    app.mount("/", StaticFiles(directory=static_dir, html=True), name="static")
+    
+    # Catch-all route for SPA (Single Page Application) routing
+    @app.get("/{full_path:path}")
+    async def serve_spa(full_path: str):
+        return FileResponse(os.path.join(static_dir, "index.html"))
+
+# Health check endpoint
+@app.get("/health")
+async def health_check():
+    return {"status": "healthy", "service": "Corporate Card Analytics"}
+
+# ================ END OF ADDED CODE ================
 
 if __name__ == "__main__":
     import uvicorn
