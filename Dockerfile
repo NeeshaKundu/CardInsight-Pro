@@ -1,14 +1,13 @@
 FROM node:18-alpine as frontend
 WORKDIR /app/frontend
 COPY frontend/package.json frontend/package-lock.json ./
-RUN npm ci
+RUN npm install --legacy-peer-deps  # ← CHANGE THIS LINE
 COPY frontend/ ./
 RUN npm run build
 
 FROM python:3.11-slim
 WORKDIR /app
 
-# Install system dependencies for scikit-learn
 RUN apt-get update && apt-get install -y gcc g++ && rm -rf /var/lib/apt/lists/*
 
 COPY backend/requirements.txt .
