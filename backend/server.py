@@ -16,6 +16,10 @@ from sklearn.preprocessing import StandardScaler
 import pandas as pd
 import io
 
+# ADD THESE TWO IMPORTS:
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
+
 ROOT_DIR = Path(__file__).parent
 load_dotenv(ROOT_DIR / '.env')
 
@@ -648,6 +652,38 @@ logger = logging.getLogger(__name__)
 @app.on_event("shutdown")
 async def shutdown_db_client():
     client.close()
+# ============================================
+# ADD THIS SECTION TO SERVE REACT FRONTEND
+# ============================================
+
+# Add these imports at the TOP of your file (with other imports)
+# from fastapi.staticfiles import StaticFiles  # <-- Add this
+# from fastapi.responses import FileResponse  # <-- Add this
+# import os  # <-- Already imported
+
+# Then add this code RIGHT BEFORE the final if __name__ block:
+
+# Mount static files directory
+app.mount("/static", StaticFiles(directory="static"), name="static")
+
+# Catch-all route to serve React app - MUST BE THE LAST ROUTE!
+@app.get("/{full_path:path}")
+async def serve_react_app(full_path: str):
+    """
+    Serve React frontend for all non-API routes.
+    This route MUST be defined AFTER all your API routes.
+    """
+    # Check if the requested file exists in static folder
+    static_file_path = os.path.join("static", full_path)
+    if full_path and os.path.exists(static_file_path):
+        return FileResponse(static_file_path)
+    
+    # For all other paths (including root), serve the React index.html
+    return FileResponse("static/index.html")
+
+# ============================================
+# END OF ADDED SECTION
+# ============================================
 
 if __name__ == "__main__":
     import uvicorn
