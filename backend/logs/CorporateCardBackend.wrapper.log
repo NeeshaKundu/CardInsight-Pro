@@ -161,3 +161,4 @@ System.ComponentModel.Win32Exception (6): The handle is invalid.
 2026-01-16 20:30:30,143 DEBUG - Starting WinSW in console mode
 2026-01-16 20:30:30,190 INFO  - Uninstalling service 'Corporate Card Backend Service (CorporateCardBackend)'...
 2026-01-16 20:30:30,202 INFO  - Service 'Corporate Card Backend Service (CorporateCardBackend)' was uninstalled successfully.
+2026-01-22 09:52:57,857 DEBUG - Starting WinSW in service mode
