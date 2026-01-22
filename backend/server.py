@@ -16,41 +16,12 @@ from sklearn.preprocessing import StandardScaler
 import pandas as pd
 import io
 
-async def check_db_connection():
-    """Check if database is available"""
-    if db is None:
-        raise HTTPException(
-            status_code=503, 
-            detail="Database connection not available"
-        )
-        
-# ADD THESE IMPORTS FOR STATIC FILE SERVING
-from fastapi.staticfiles import StaticFiles
-from fastapi.responses import FileResponse
-
 ROOT_DIR = Path(__file__).parent
 load_dotenv(ROOT_DIR / '.env')
 
-# UPDATED MONGODB CONNECTION FOR ATLAS
-# Get MongoDB URL from environment
-mongo_url = os.getenv('MONGO_URL', 'mongodb://localhost:27017')
-db_name = os.getenv('DB_NAME', 'test_database')
-
-print(f"🔗 Attempting MongoDB connection to: {mongo_url[:50]}...")
-
-# SIMPLIFIED CONNECTION - Let Motor handle SSL automatically
-try:
-    # Motor 3.4+ handles SSL automatically for Atlas
-    client = AsyncIOMotorClient(mongo_url, serverSelectionTimeoutMS=5000)
-    # Test connection
-    await client.admin.command('ping')
-    print("✅ MongoDB connection successful!")
-except Exception as e:
-    print(f"❌ MongoDB connection failed: {e}")
-    # Create fallback for development
-    client = None
-
-db = client[db_name] if client else None
+mongo_url = os.environ['MONGO_URL']
+client = AsyncIOMotorClient(mongo_url)
+db = client[os.environ['DB_NAME']]
 
 app = FastAPI()
 api_router = APIRouter(prefix="/api")
@@ -100,39 +71,6 @@ class ProductRecommendation(BaseModel):
     reason: str
     priority: str
     expected_value: str
-
-# DEBUG ENDPOINT TO CHECK STATIC FILES
-@api_router.get("/debug/check-static")
-async def check_static():
-    """Debug endpoint to check static file locations"""
-    import os
-    
-    current_dir = os.getcwd()
-    static_exists = os.path.exists("static")
-    
-    static_files = []
-    if static_exists:
-        static_files = os.listdir("static")
-    
-    # Check specific paths
-    paths_to_check = [
-        "static/index.html",
-        "static/js/",
-        "static/css/",
-        "/app/static/index.html"
-    ]
-    
-    path_status = {}
-    for path in paths_to_check:
-        path_status[path] = os.path.exists(path)
-    
-    return {
-        "current_directory": current_dir,
-        "static_exists": static_exists,
-        "static_files_count": len(static_files),
-        "static_files_sample": static_files[:10] if static_files else [],
-        "path_status": path_status
-    }
 
 @api_router.get("/")
 async def root():
@@ -694,9 +632,7 @@ app.add_middleware(
         "http://localhost:8080",
         "http://127.0.0.1:8080",
         "http://localhost:5500",
-        "http://127.0.0.1:5500",
-        "https://cardinsight-pro.onrender.com",  # ADD YOUR RENDER DOMAIN
-        "http://cardinsight-pro.onrender.com"   # ADD HTTP VERSION TOO
+        "http://127.0.0.1:5500"
     ],
     allow_credentials=True,
     allow_methods=["*"],
@@ -708,32 +644,6 @@ logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
 )
 logger = logging.getLogger(__name__)
-
-# ============================================
-# ADDED: STATIC FILE SERVING FOR REACT FRONTEND
-# ============================================
-
-# Mount static files directory
-app.mount("/static", StaticFiles(directory="static"), name="static")
-
-# Catch-all route to serve React app - MUST BE THE LAST ROUTE!
-@app.get("/{full_path:path}")
-async def serve_react_app(full_path: str):
-    """
-    Serve React frontend for all non-API routes.
-    This route MUST be defined AFTER all your API routes.
-    """
-    # Check if the requested file exists in static folder
-    static_file_path = os.path.join("static", full_path)
-    if full_path and os.path.exists(static_file_path):
-        return FileResponse(static_file_path)
-    
-    # For all other paths (including root), serve the React index.html
-    return FileResponse("static/index.html")
-
-# ============================================
-# END OF ADDED SECTION
-# ============================================
 
 @app.on_event("shutdown")
 async def shutdown_db_client():
