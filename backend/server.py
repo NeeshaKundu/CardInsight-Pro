@@ -16,16 +16,25 @@ from sklearn.preprocessing import StandardScaler
 import pandas as pd
 import io
 
-# ADD THESE TWO IMPORTS:
+# ADD THESE IMPORTS FOR STATIC FILE SERVING
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
 
 ROOT_DIR = Path(__file__).parent
 load_dotenv(ROOT_DIR / '.env')
 
-mongo_url = os.environ['MONGO_URL']
-client = AsyncIOMotorClient(mongo_url)
-db = client[os.environ['DB_NAME']]
+# UPDATED MONGODB CONNECTION FOR ATLAS
+# Get MongoDB URL from environment
+mongo_url = os.getenv('MONGO_URL', 'mongodb://localhost:27017')
+db_name = os.getenv('DB_NAME', 'test_database')
+
+# Create MongoDB client with SSL for Atlas
+if 'mongodb+srv' in mongo_url:  # This is an Atlas connection
+    client = AsyncIOMotorClient(mongo_url, tls=True, tlsAllowInvalidCertificates=True)
+else:  # This is a local connection
+    client = AsyncIOMotorClient(mongo_url)
+
+db = client[db_name]
 
 app = FastAPI()
 api_router = APIRouter(prefix="/api")
@@ -75,6 +84,39 @@ class ProductRecommendation(BaseModel):
     reason: str
     priority: str
     expected_value: str
+
+# DEBUG ENDPOINT TO CHECK STATIC FILES
+@api_router.get("/debug/check-static")
+async def check_static():
+    """Debug endpoint to check static file locations"""
+    import os
+    
+    current_dir = os.getcwd()
+    static_exists = os.path.exists("static")
+    
+    static_files = []
+    if static_exists:
+        static_files = os.listdir("static")
+    
+    # Check specific paths
+    paths_to_check = [
+        "static/index.html",
+        "static/js/",
+        "static/css/",
+        "/app/static/index.html"
+    ]
+    
+    path_status = {}
+    for path in paths_to_check:
+        path_status[path] = os.path.exists(path)
+    
+    return {
+        "current_directory": current_dir,
+        "static_exists": static_exists,
+        "static_files_count": len(static_files),
+        "static_files_sample": static_files[:10] if static_files else [],
+        "path_status": path_status
+    }
 
 @api_router.get("/")
 async def root():
@@ -632,12 +674,13 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:3000",
-        "https://cardinsight-pro.onrender.com",
         "http://127.0.0.1:3000",
         "http://localhost:8080",
         "http://127.0.0.1:8080",
         "http://localhost:5500",
-        "http://127.0.0.1:5500"
+        "http://127.0.0.1:5500",
+        "https://cardinsight-pro.onrender.com",  # ADD YOUR RENDER DOMAIN
+        "http://cardinsight-pro.onrender.com"   # ADD HTTP VERSION TOO
     ],
     allow_credentials=True,
     allow_methods=["*"],
@@ -650,19 +693,9 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-@app.on_event("shutdown")
-async def shutdown_db_client():
-    client.close()
 # ============================================
-# ADD THIS SECTION TO SERVE REACT FRONTEND
+# ADDED: STATIC FILE SERVING FOR REACT FRONTEND
 # ============================================
-
-# Add these imports at the TOP of your file (with other imports)
-# from fastapi.staticfiles import StaticFiles  # <-- Add this
-# from fastapi.responses import FileResponse  # <-- Add this
-# import os  # <-- Already imported
-
-# Then add this code RIGHT BEFORE the final if __name__ block:
 
 # Mount static files directory
 app.mount("/static", StaticFiles(directory="static"), name="static")
@@ -685,6 +718,10 @@ async def serve_react_app(full_path: str):
 # ============================================
 # END OF ADDED SECTION
 # ============================================
+
+@app.on_event("shutdown")
+async def shutdown_db_client():
+    client.close()
 
 if __name__ == "__main__":
     import uvicorn
