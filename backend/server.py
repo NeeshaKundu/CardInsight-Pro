@@ -16,6 +16,14 @@ from sklearn.preprocessing import StandardScaler
 import pandas as pd
 import io
 
+async def check_db_connection():
+    """Check if database is available"""
+    if db is None:
+        raise HTTPException(
+            status_code=503, 
+            detail="Database connection not available"
+        )
+        
 # ADD THESE IMPORTS FOR STATIC FILE SERVING
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
@@ -28,13 +36,21 @@ load_dotenv(ROOT_DIR / '.env')
 mongo_url = os.getenv('MONGO_URL', 'mongodb://localhost:27017')
 db_name = os.getenv('DB_NAME', 'test_database')
 
-# Create MongoDB client with SSL for Atlas
-if 'mongodb+srv' in mongo_url:  # This is an Atlas connection
-    client = AsyncIOMotorClient(mongo_url, tls=True, tlsAllowInvalidCertificates=True)
-else:  # This is a local connection
-    client = AsyncIOMotorClient(mongo_url)
+print(f"🔗 Attempting MongoDB connection to: {mongo_url[:50]}...")
 
-db = client[db_name]
+# SIMPLIFIED CONNECTION - Let Motor handle SSL automatically
+try:
+    # Motor 3.4+ handles SSL automatically for Atlas
+    client = AsyncIOMotorClient(mongo_url, serverSelectionTimeoutMS=5000)
+    # Test connection
+    await client.admin.command('ping')
+    print("✅ MongoDB connection successful!")
+except Exception as e:
+    print(f"❌ MongoDB connection failed: {e}")
+    # Create fallback for development
+    client = None
+
+db = client[db_name] if client else None
 
 app = FastAPI()
 api_router = APIRouter(prefix="/api")
